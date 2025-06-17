@@ -1,10 +1,22 @@
-function foo() {
-  const random = Math.random();
-  if (random > 0.5) {
-    console.log("Random number is greater than 0.5");
-  } else {
-    console.log("Random number is less than or equal to 0.5");
-  }
-}
+/**
+ * @fileoverview Main package entrypoint.
+ * @author Raphael Arce
+ */
 
-foo();
+"use strict";
+
+import noElseRule from "./no-else.js";
+import packageJson from "../package.json" with { type: "json" };
+const { name, version } = packageJson;
+
+const plugin = {
+  meta: {
+    name,
+    version,
+  },
+  rules: {
+    "no-else": noElseRule,
+  },
+};
+
+export default plugin;

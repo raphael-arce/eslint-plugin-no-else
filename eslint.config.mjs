@@ -1,15 +1,15 @@
 import js from "@eslint/js";
 import globals from "globals";
 import { defineConfig } from "eslint/config";
-import eslintNoElse from "./src/plugin.js";
+import eslintNoElse from "./src/index.js";
 
 export default defineConfig([
   {
     files: ["**/*.{js,mjs,cjs}"],
-    plugins: { js, custom: eslintNoElse },
+    plugins: { js, "no-else": eslintNoElse },
     extends: ["js/recommended"],
     rules: {
-      "custom/no-else": "error",
+      "no-else/no-else": "error",
     },
   },
   { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
