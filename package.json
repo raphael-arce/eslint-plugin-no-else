@@ -1,18 +1,46 @@
 {
-  "name": "no-else",
+  "name": "eslint-plugin-no-else",
   "version": "0.1.0",
-  "description": "Example rule to forbid else blocks",
+  "description": "ESLint plugin to forbid else blocks and encourage early returns",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
     "test": "node src/no-else.test.js"
   },
-  "keywords": [],
-  "author": "Raphael Arce <raphael.arce@ts.berlin>",
-  "license": "MIT",
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "no-else",
+    "early-return",
+    "code-style"
+  ],
+  "author": "Raphael Arce",
+  "license": "CC BY 4.0",
+  "files": [
+    "src/index.js",
+    "src/no-else.js",
+    "src/no-else.test.js",
+    "README.md",
+    "LICENSE.md"
+  ],
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
   "devDependencies": {
     "@eslint/js": "9.29.0",
     "eslint": "9.29.0",
     "globals": "16.2.0"
-  }
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raphael-arce/eslint-plugin-no-else.git"
+  },
+  "bugs": {
+    "url": "https://github.com/raphael-arce/eslint-plugin-no-else/issues"
+  },
+  "homepage": "https://github.com/raphael-arce/eslint-plugin-no-else#readme"
 }
