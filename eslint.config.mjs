@@ -5,12 +5,12 @@ import eslintNoElse from "./src/index.js";
 
 export default defineConfig([
   {
-    files: ["**/*.{js,mjs,cjs}"],
+    files: ["**/*.{js,mjs,cjs,md}"],
     plugins: { js, "no-else": eslintNoElse },
     extends: ["js/recommended"],
     rules: {
       "no-else/no-else": "error",
     },
   },
-  { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
+  { files: ["**/*.{js,mjs,cjs,md}"], languageOptions: { globals: { ...globals.browser, ...globals.node } } },
 ]);
